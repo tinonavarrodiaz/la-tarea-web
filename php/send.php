@@ -21,6 +21,7 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $msg = $_POST['msg'];
 $emailTo = $_POST['emailTo'];
+$phone = $_POST['phone'];
 
 if(!empty($name) || !empty($email) || !empty($msg)){
   $email_saliente_nombre = $name;
@@ -39,6 +40,7 @@ if(!empty($name) || !empty($email) || !empty($msg)){
     <body>
     Name: <b>{$name}</b> <br><br>
     Email: <b>{$email}</b> <br><br>
+    Phone: <b>{$phone}</b> <br><br>
     Message: <b>{$msg}</b> <br><br>
     </body>
     </html>";
@@ -51,5 +53,3 @@ if(!empty($name) || !empty($email) || !empty($msg)){
 }else {
   response('Incomplete data. Please check and try again', "error", 400, true);
 }
-
-?>
